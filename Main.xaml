@@ -1,0 +1,644 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="715.2,610.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/python" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="41">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Python</x:String>
+      <x:String>UiPath.Python.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="122">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Diagnostics.Process</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="300,142.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart DisplayName="RPA EMAIL " sap:VirtualizedContainerService.HintSize="633.6,636.8" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+      <Flowchart.Variables>
+        <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Out_Config" />
+      </Flowchart.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,77.7 300,127.7</av:PointCollection>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID1</x:Reference>
+      </Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">200,127.7</av:Point>
+            <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">300,210.9 300,260.9</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="Get Data" sap:VirtualizedContainerService.HintSize="200,83.2" sap2010:WorkflowViewState.IdRef="Sequence_20">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sd:DataTable" Name="ConfigData" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="510.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+            <Assign.To>
+              <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[Out_Config]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[New Dictionary(of String,Object)]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[ConfigData]" DisplayName="Get Data" sap:VirtualizedContainerService.HintSize="510.4,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="ConfigSheet" WorkbookPath="Data.xlsx" />
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ConfigData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510.4,288" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_11">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Object">[Out_Config(row("Name").ToString)]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Object">[row("Value")]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+          </ui:ForEachRow>
+        </Sequence>
+        <FlowStep.Next>
+          <FlowStep x:Name="__ReferenceID0">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">200,260.9</av:Point>
+                <av:Size x:Key="ShapeSize">200,83.2</av:Size>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Open Email" sap:VirtualizedContainerService.HintSize="886.4,13708.8" sap2010:WorkflowViewState.IdRef="Sequence_36">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="DataEmail" />
+                <Variable x:TypeArguments="x:Object" Name="numberofmail" />
+                <Variable x:TypeArguments="x:Int32" Name="nummail" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="824,134.4" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="outlook" />
+              <Assign sap:VirtualizedContainerService.HintSize="824,81.6" sap2010:WorkflowViewState.IdRef="Assign_12">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[numberofmail]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Object">[Out_Config("Number of mails")]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="824,81.6" sap2010:WorkflowViewState.IdRef="Assign_13">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[nummail]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(numberofmail)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" SecurePassword="{x:Null}" UseOAuth="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="824,24.8" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_2" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[DataEmail]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Password="ofvnxcjzjxlhltsh" Port="993" SecureConnection="Auto" Server="imap.gmail.com" TimeoutMS="300000" Top="[nummail]" />
+              <p:PythonScope OperationTimeout="{x:Null}" DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="824,13114.4" sap2010:WorkflowViewState.IdRef="PythonScope_2" Path="C:\Users\laptop\AppData\Local\Programs\Python\Python39" TargetPlatform="x64" Version="Python 3.9">
+                <p:PythonScope.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="PythonEngineSessionProperty" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="790.4,13077.6" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="p:PythonObject" Name="PyScript" />
+                        <Variable x:TypeArguments="x:Int32" Name="STTmail" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <p:LoadScript Code="{x:Null}" DisplayName="Load Python Script" sap:VirtualizedContainerService.HintSize="747.2,60" sap2010:WorkflowViewState.IdRef="LoadScript_2" Result="[PyScript]" ScriptFile="test_emails.py" />
+                      <Assign sap:VirtualizedContainerService.HintSize="747.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_18">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[STTmail]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="Vòng lặp mỗi mail" sap:VirtualizedContainerService.HintSize="747.2,12766.4" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[DataEmail]">
+                        <ui:ForEach.Body>
+                          <ActivityAction x:TypeArguments="snm:MailMessage">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="mail" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="712,12641.6" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="p:PythonObject" Name="method_classification" />
+                                <Variable x:TypeArguments="p:PythonObject" Name="method_confidence" />
+                                <Variable x:TypeArguments="x:Object" Name="output_confidence" />
+                                <Variable x:TypeArguments="x:Object" Name="output_classification" />
+                                <Variable x:TypeArguments="p:PythonObject" Name="check" />
+                                <Variable x:TypeArguments="x:Object" Name="out_check" />
+                                <Variable x:TypeArguments="x:Object" Name="success" />
+                                <Variable x:TypeArguments="x:Object" Name="email_sent" />
+                                <Variable x:TypeArguments="x:Int32" Name="STT" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="668.8,81.6" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[STT]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">[STTmail+1]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:WriteCell Cell="[&quot;A&quot;+STT.ToString]" DisplayName="Tracking STT" sap:VirtualizedContainerService.HintSize="668.8,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Tracking" Text="[STTmail.ToString]" WorkbookPath="Tracking.xlsx" />
+                              <ui:WriteCell Cell="[&quot;B&quot;+STT.ToString]" DisplayName="Tracking nội dung" sap:VirtualizedContainerService.HintSize="668.8,116" sap2010:WorkflowViewState.IdRef="WriteCell_31" SheetName="Tracking" Text="[mail.Subject+Environment.NewLine+mail.Body]" WorkbookPath="Tracking.xlsx" />
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Thông báo số thứ tự mail" sap:VirtualizedContainerService.HintSize="668.8,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_24" Text="[&quot;Mail thứ &quot;+STTmail.ToString]" />
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Thông báo nội dung mail" sap:VirtualizedContainerService.HintSize="668.8,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_25" Text="[mail.Subject.ToString+Environment.NewLine+&#xA;mail.Body.ToString]" />
+                              <p:InvokeMethod DisplayName="Classification" sap:VirtualizedContainerService.HintSize="668.8,80.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_3" Instance="[PyScript]" Name="classification" Parameters="[{mail.Body.ToString}]" Result="[method_classification]" />
+                              <p:GetObject x:TypeArguments="x:Object" DisplayName="Output Classification" sap:VirtualizedContainerService.HintSize="668.8,80.8" sap2010:WorkflowViewState.IdRef="GetObject`1_3" PythonObject="[method_classification]" Result="[output_classification]" />
+                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Thông báo kết quả phân loại" sap:VirtualizedContainerService.HintSize="668.8,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_26" Text="[&quot;Thông báo kết quả phân loại phòng của email thứ &quot;+ STTmail.ToString + &quot; là &quot;+  output_classification.ToString]" />
+                              <p:InvokeMethod DisplayName="Confidence" sap:VirtualizedContainerService.HintSize="668.8,80.8" sap2010:WorkflowViewState.IdRef="InvokeMethod_4" Instance="[PyScript]" Name="confidence" Parameters="[{mail.Body.ToString}]" Result="[method_confidence]" />
+                              <p:GetObject x:TypeArguments="x:Object" DisplayName="Output Confidence" sap:VirtualizedContainerService.HintSize="668.8,80.8" sap2010:WorkflowViewState.IdRef="GetObject`1_4" PythonObject="[method_confidence]" Result="[output_confidence]" />
+                              <If Condition="[output_classification.ToString = &quot;Spam Email&quot;]" sap:VirtualizedContainerService.HintSize="668.8,1508.8" sap2010:WorkflowViewState.IdRef="If_7">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="453.6,1154.4" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="410.4,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_34" Text="[&quot;Email thứ &quot; + STTmail.ToString +&quot; được xác đinh là Spam&quot;]" />
+                                    <If Condition="[convert.ToDouble(output_confidence) &gt;= convert.ToDouble(Out_Config(&quot;Confidence&quot;))]" sap:VirtualizedContainerService.HintSize="410.4,939.2" sap2010:WorkflowViewState.IdRef="If_14">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,673.6" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:WriteCell Cell="[&quot;C&quot;+STT.ToString]" DisplayName="Nội dung email " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_28" SheetName="Tracking" Text="Auto" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;D&quot;+STT.ToString]" DisplayName="Classification" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_21" SheetName="Tracking" Text="[output_classification.ToString]" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;E&quot;+STT.ToString]" DisplayName="Địa chỉ email" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_22" SheetName="Tracking" Text="Spam Email" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;F&quot;+STT.ToString]" DisplayName="Địa chỉ email" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_30" SheetName="Tracking" Text="Đã chuyển vào Spam" WorkbookPath="Tracking.xlsx" />
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="300,82.4" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Object">[email_sent]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Object">[Out_Config("Email "+output_classification.ToString)]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                              <If Condition="[convert.ToDouble(output_confidence) &lt; convert.ToDouble(Out_Config(&quot;Confidence&quot;))]" sap:VirtualizedContainerService.HintSize="668.8,9588" sap2010:WorkflowViewState.IdRef="If_8">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="635.2,8018.4" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="x:String" Name="chose_department" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Thông báo do confidence quá thâp" sap:VirtualizedContainerService.HintSize="592,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_27" Text="[&quot;Thông báo: &quot;+ output_confidence.ToString + Environment.NewLine+&#xA;&quot;Bởi vì độ tin cậy thấp, nên cần bạn thực hiện human in loop.&quot;]" />
+                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Hiện nội dung email để nhân viên đọc " sap:VirtualizedContainerService.HintSize="592,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_28" Text="[mail.Subject.ToString+&#xA;mail.Body.ToString]" />
+                                    <ui:InputDialog OptionsString="{x:Null}" DisplayName="Chọn phòng" sap:VirtualizedContainerService.HintSize="592,295.2" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Choose a department to forward the email" Options="[{&quot;1. Customer Department&quot;,&quot;2. Sales Department&quot;,&quot;3. External Relationship Department&quot;,&quot;4. Spam&quot;,&quot;5. Other&quot;}]" Title="Choose a department to forward the email">
+                                      <ui:InputDialog.Result>
+                                        <OutArgument x:TypeArguments="x:String">[chose_department]</OutArgument>
+                                      </ui:InputDialog.Result>
+                                    </ui:InputDialog>
+                                    <If Condition="[chose_department.ToString = &quot;1. Customer Department&quot;]" DisplayName="Customer Department" sap:VirtualizedContainerService.HintSize="592,1296.8" sap2010:WorkflowViewState.IdRef="If_9">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,1113.6" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" Subject="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="Email được chuyển tiếp đến phòng Customer Care" DisplayName="STMP gửi phòng Customer Care" Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_6" IgnoreCRL="False" IsBodyHtml="False" MailMessage="[mail]" Password="ofvnxcjzjxlhltsh" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" To="[Out_Config(&quot;Email Customer Care Department&quot;).ToString]">
+                                            <ui:SendMail.Files>
+                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                            </ui:SendMail.Files>
+                                          </ui:SendMail>
+                                          <ui:MoveIMAPMailMessageToFolder ClientName="{x:Null}" ClientVersion="{x:Null}" SecurePassword="{x:Null}" UseOAuth="{x:Null}" DisplayName="Move IMAP Mail Message" Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" FromFolder="[Out_Config(&quot;MailFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="MoveIMAPMailMessageToFolder_2" IgnoreCRL="False" MailFolder="Customer Care Department" MailMessage="[mail]" Password="ofvnxcjzjxlhltsh" Port="993" SecureConnection="Auto" Server="imap.gmail.com" />
+                                          <ui:WriteCell Cell="[&quot;C&quot;+STT.ToString]" DisplayName="Phương thức chuyển tiếp" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_23" SheetName="Tracking" Text="Human in loop" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;D&quot;+STT.ToString]" DisplayName="Kết quả phân loại phòng ban " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Tracking" Text="Customer Care Department" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;E&quot;+STT.ToString]" DisplayName="Địa chỉ email  " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Tracking" Text="[Out_Config(&quot;Email Customer Care Department&quot;).ToString]" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;F&quot;+STT.ToString]" DisplayName="Trạng thái  " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_15" SheetName="Tracking" Text="Đã gửi thành công" WorkbookPath="Tracking.xlsx" />
+                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Private: Thông báo gửi đến phòng Customer Care thành công" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_29" Text="[&quot;Email thứ &quot;+STTmail.ToString+ Environment.NewLine+&#xA;&quot;Email was sent to Customer Department&quot;]" />
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,82.4" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <If Condition="[chose_department.ToString = &quot;2. Sales Department&quot;]" DisplayName="Sale Department" sap:VirtualizedContainerService.HintSize="592,1296.8" sap2010:WorkflowViewState.IdRef="If_10">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,1113.6" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" Subject="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="Email được gửi đến phòng Sale Department" DisplayName="STMP phòng Sale" Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_7" IgnoreCRL="False" IsBodyHtml="False" MailMessage="[mail]" Password="ofvnxcjzjxlhltsh" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" To="[Out_Config(&quot;Email Sales Department&quot;).ToString]">
+                                            <ui:SendMail.Files>
+                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                            </ui:SendMail.Files>
+                                          </ui:SendMail>
+                                          <ui:MoveIMAPMailMessageToFolder ClientName="{x:Null}" ClientVersion="{x:Null}" SecurePassword="{x:Null}" UseOAuth="{x:Null}" DisplayName="Move Sales" Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" FromFolder="Inbox" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="MoveIMAPMailMessageToFolder_3" IgnoreCRL="False" MailFolder="Sales Department" MailMessage="[mail]" Password="ofvnxcjzjxlhltsh" Port="993" SecureConnection="Auto" Server="imap.gmail.com" />
+                                          <ui:WriteCell Cell="[&quot;C&quot;+STT.ToString]" DisplayName="Phương thức chuyển tiếp" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_24" SheetName="Tracking" Text="Human in loop" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;D&quot;+STT.ToString]" DisplayName="Kết quả phân loại phòng ban " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="Tracking" Text="Sales Department" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;E&quot;+STT.ToString]" DisplayName="Địa chỉ email  " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="Tracking" Text="[Out_Config(&quot;Email Sales Department&quot;).ToString]" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;F&quot;+STT.ToString]" DisplayName="Trạng thái " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_16" SheetName="Tracking" Text="Đã gửi thành công" WorkbookPath="Tracking.xlsx" />
+                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Thông báo gửi đến phòng Sale thành công" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_30" Text="[&quot;Email thứ &quot;+STTmail.ToString+ Environment.NewLine+&#xA;&quot;Email đã được gửi đến Sale Department&quot;]" />
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,82.4" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <If Condition="[chose_department.ToString = &quot;3. External Relationship Department&quot;]" DisplayName="External Relationship" sap:VirtualizedContainerService.HintSize="592,1296.8" sap2010:WorkflowViewState.IdRef="If_11">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,1113.6" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" Subject="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="Email được chuyển tiếp đến phòng External Relationship" DisplayName="SMTP phòng đối ngoại " Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_8" IgnoreCRL="False" IsBodyHtml="False" MailMessage="[mail]" Password="ofvnxcjzjxlhltsh" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" To="[Out_Config(&quot;Email External Relationship Department&quot;).ToString]">
+                                            <ui:SendMail.Files>
+                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                            </ui:SendMail.Files>
+                                          </ui:SendMail>
+                                          <ui:MoveIMAPMailMessageToFolder ClientName="{x:Null}" ClientVersion="{x:Null}" SecurePassword="{x:Null}" UseOAuth="{x:Null}" DisplayName="Move IMAP Mail Message" Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" FromFolder="[Out_Config(&quot;MailFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="MoveIMAPMailMessageToFolder_4" IgnoreCRL="False" MailFolder="External Relationship Department" MailMessage="[mail]" Password="ofvnxcjzjxlhltsh" Port="993" SecureConnection="Auto" Server="imap.gmail.com" />
+                                          <ui:WriteCell Cell="[&quot;C&quot;+STT.ToString]" DisplayName="Phương thức chuyển tiếp" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_25" SheetName="Tracking" Text="Human in loop" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;D&quot;+STT.ToString]" DisplayName="Kết quả phân loại phòng ban " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_7" SheetName="Tracking" Text="External Relationship Department" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;E&quot;+STT.ToString]" DisplayName="Địa chỉ email  " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_8" SheetName="Tracking" Text="[Out_Config(&quot;Email External Relationship Department&quot;).ToString]" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;F&quot;+STT.ToString]" DisplayName="Trạng thái " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_17" SheetName="Tracking" Text="Đã gửi thành công" WorkbookPath="Tracking.xlsx" />
+                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Thông báo gửi đến phòng đối ngoại " sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_31" Text="[&quot;Email thứ &quot;+STTmail.ToString+ Environment.NewLine+&#xA;&quot;Email đã được gửi đến External Relationship Department&quot;]" />
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,82.4" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <If Condition="[chose_department.ToString = &quot;4. Spam&quot;]" sap:VirtualizedContainerService.HintSize="592,1112.8" sap2010:WorkflowViewState.IdRef="If_13">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,929.6" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:MoveIMAPMailMessageToFolder ClientName="{x:Null}" ClientVersion="{x:Null}" SecurePassword="{x:Null}" UseOAuth="{x:Null}" DisplayName="Move IMAP Mail Message" Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" FromFolder="[Out_Config(&quot;MailFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="MoveIMAPMailMessageToFolder_5" IgnoreCRL="False" MailFolder="Spam Email" MailMessage="[mail]" Password="ofvnxcjzjxlhltsh" Port="993" SecureConnection="Auto" Server="imap.gmail.com" />
+                                          <ui:WriteCell Cell="[&quot;C&quot;+STT.ToString]" DisplayName="Phương thức chuyển tiếp" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_26" SheetName="Tracking" Text="Human in loop" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;D&quot;+STT.ToString]" DisplayName="Kết quả phân loại phòng ban " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_9" SheetName="Tracking" Text="Spam" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;E&quot;+STT.ToString]" DisplayName="Địa chỉ email  " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_10" SheetName="Tracking" Text="Spam" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;F&quot;+STT.ToString]" DisplayName="Trạng thái " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_18" SheetName="Tracking" Text="Đã chuyển vào mục Spam" WorkbookPath="Tracking.xlsx" />
+                                          <ui:MoveIMAPMailMessageToFolder ClientName="{x:Null}" ClientVersion="{x:Null}" SecurePassword="{x:Null}" UseOAuth="{x:Null}" DisplayName="Move IMAP Mail Message" Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" FromFolder="[Out_Config(&quot;MailFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="MoveIMAPMailMessageToFolder_8" IgnoreCRL="False" MailFolder="Spam Email" MailMessage="[mail]" Password="ofvnxcjzjxlhltsh" Port="993" SecureConnection="Auto" Server="imap.gmail.com" />
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,82.4" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <If Condition="[chose_department.ToString = &quot;5. Other&quot;]" DisplayName="Other" sap:VirtualizedContainerService.HintSize="592,2179.2" sap2010:WorkflowViewState.IdRef="If_12">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="558.4,1996" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="x:String" Name="send_otheremail" />
+                                            <Variable x:TypeArguments="x:Boolean" Default="True" Name="remail" />
+                                          </Sequence.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[remail = True]" DisplayName="While" sap:VirtualizedContainerService.HintSize="515.2,1780.8" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                                            <ui:InterruptibleWhile.Body>
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="480,1613.6" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Hộp thoại nhập địa chỉ email" sap:VirtualizedContainerService.HintSize="436.8,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Nhập địa chỉ email bạn muốn gửi đến" Title="Nhập địa chỉ email bạn muốn gửi đến">
+                                                  <ui:InputDialog.Result>
+                                                    <OutArgument x:TypeArguments="x:String">[send_otheremail]</OutArgument>
+                                                  </ui:InputDialog.Result>
+                                                </ui:InputDialog>
+                                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,1242.4" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                                                  <TryCatch.Try>
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="376.8,988" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" Subject="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[&quot;Email được gửi đến&quot; +output_classification.ToString]" DisplayName="Send SMTP Mail Message" Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_9" IgnoreCRL="False" IsBodyHtml="False" MailMessage="[mail]" Password="ofvnxcjzjxlhltsh" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" To="[send_otheremail]">
+                                                        <ui:SendMail.Files>
+                                                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                                        </ui:SendMail.Files>
+                                                      </ui:SendMail>
+                                                      <ui:WriteCell Cell="[&quot;C&quot;+STT.ToString]" DisplayName="Phương thức chuyển tiếp" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_32" SheetName="Tracking" Text="Human in loop" WorkbookPath="Tracking.xlsx" />
+                                                      <ui:WriteCell Cell="[&quot;D&quot;+STT.ToString]" DisplayName="Kết quả phân loại phòng ban " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_11" SheetName="Tracking" Text="Other" WorkbookPath="Tracking.xlsx" />
+                                                      <ui:WriteCell Cell="[&quot;E&quot;+STT.ToString]" DisplayName="Địa chỉ email  " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_12" SheetName="Tracking" Text="[send_otheremail.ToString]" WorkbookPath="Tracking.xlsx" />
+                                                      <ui:WriteCell Cell="[&quot;F&quot;+STT.ToString]" DisplayName="Trạng thái " sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_19" SheetName="Tracking" Text="Đã gửi thành công" WorkbookPath="Tracking.xlsx" />
+                                                      <ui:MoveIMAPMailMessageToFolder ClientName="{x:Null}" ClientVersion="{x:Null}" SecurePassword="{x:Null}" UseOAuth="{x:Null}" DisplayName="Move IMAP Mail Message" Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" FromFolder="[Out_Config(&quot;MailFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="MoveIMAPMailMessageToFolder_6" IgnoreCRL="False" MailFolder="Other" MailMessage="[mail]" Password="ofvnxcjzjxlhltsh" Port="993" SecureConnection="Auto" Server="imap.gmail.com" />
+                                                    </Sequence>
+                                                  </TryCatch.Try>
+                                                  <TryCatch.Catches>
+                                                    <Catch x:TypeArguments="s:FormatException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ActivityAction x:TypeArguments="s:FormatException">
+                                                        <ActivityAction.Argument>
+                                                          <DelegateInArgument x:TypeArguments="s:FormatException" Name="exception" />
+                                                        </ActivityAction.Argument>
+                                                      </ActivityAction>
+                                                    </Catch>
+                                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ActivityAction x:TypeArguments="s:Exception">
+                                                        <ActivityAction.Argument>
+                                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="" />
+                                                        </ActivityAction.Argument>
+                                                      </ActivityAction>
+                                                    </Catch>
+                                                  </TryCatch.Catches>
+                                                  <TryCatch.Finally>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:Boolean">[remail]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                  </TryCatch.Finally>
+                                                </TryCatch>
+                                              </Sequence>
+                                            </ui:InterruptibleWhile.Body>
+                                          </ui:InterruptibleWhile>
+                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="515.2,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_32" Text="[&quot;Email &quot;+STTmail.ToString+ &quot; đã được gửi đến &quot;+ send_otheremail]" />
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,82.4" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="453.6,1386.4" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <If Condition="[output_classification.ToString &lt;&gt; &quot;Spam Email&quot;]" sap:VirtualizedContainerService.HintSize="410.4,1296.8" sap2010:WorkflowViewState.IdRef="If_15">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376.8,1113.6" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:WriteCell Cell="[&quot;C&quot;+STT.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_29" SheetName="Tracking" Text="Auto" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;D&quot;+STT.ToString]" DisplayName="Phòng ban được gửi tới" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_13" SheetName="Tracking" Text="[output_classification.ToString]" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;E&quot;+STT.ToString]" DisplayName="Địa chỉ email" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_14" SheetName="Tracking" Text="[Out_Config(output_classification.ToString).ToString]" WorkbookPath="Tracking.xlsx" />
+                                          <ui:WriteCell Cell="[&quot;F&quot;+STT.ToString]" DisplayName="Trạng thái" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteCell_20" SheetName="Tracking" Text="Đã gửi thành công" WorkbookPath="Tracking.xlsx" />
+                                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" Name="{x:Null}" ReplyTo="{x:Null}" SecurePassword="{x:Null}" Subject="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" Body="[&quot;Email đã được chuyển tiếp đến phòng&quot;+output_classification.ToString]" DisplayName="SMTP các phòng " Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" sap:VirtualizedContainerService.HintSize="333.6,146.4" sap2010:WorkflowViewState.IdRef="SendMail_10" IgnoreCRL="False" IsBodyHtml="False" MailMessage="[mail]" Password="ofvnxcjzjxlhltsh" Port="465" SecureConnection="Auto" Server="smtp.gmail.com" To="[email_sent.ToString]">
+                                            <ui:SendMail.Files>
+                                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                            </ui:SendMail.Files>
+                                          </ui:SendMail>
+                                          <ui:MoveIMAPMailMessageToFolder ClientName="{x:Null}" ClientVersion="{x:Null}" SecurePassword="{x:Null}" UseOAuth="{x:Null}" DisplayName="Move IMAP Mail Message" Email="[Out_Config(&quot;outlookAccount&quot;).ToString]" EnableSSL="True" FromFolder="[Out_Config(&quot;MailFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="MoveIMAPMailMessageToFolder_7" IgnoreCRL="False" MailFolder="[Out_Config(output_classification.toString).ToString]" MailMessage="[mail]" Password="ofvnxcjzjxlhltsh" Port="993" SecureConnection="Auto" Server="imap.gmail.com" />
+                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Thông báo gửi đến phòng ban" sap:VirtualizedContainerService.HintSize="333.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_33" Text="[&quot;Email đã được chuyển tiếp đến &quot;+output_classification.ToString]" />
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="400,82.4" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                              <Assign sap:VirtualizedContainerService.HintSize="668.8,81.6" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Int32">[STTmail]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Int32">[STTmail+1]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEach.Body>
+                      </ui:ForEach>
+                    </Sequence>
+                  </ActivityAction>
+                </p:PythonScope.Body>
+              </p:PythonScope>
+            </Sequence>
+          </FlowStep>
+        </FlowStep.Next>
+      </FlowStep>
+      <x:Reference>__ReferenceID0</x:Reference>
+    </Flowchart>
+  </Sequence>
+</Activity>
